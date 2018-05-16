@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35E82F62256E501B89C14909 /* Pods_upvideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D48B3FAE9076081550E38B88 /* Pods_upvideo.framework */; };
 		7EA5207120ABD3E50038E2D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA5207020ABD3E50038E2D7 /* AppDelegate.swift */; };
 		7EA5207320ABD3E50038E2D7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA5207220ABD3E50038E2D7 /* ViewController.swift */; };
 		7EA5207620ABD3E50038E2D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EA5207420ABD3E50038E2D7 /* Main.storyboard */; };
@@ -22,6 +23,9 @@
 		7EA5207720ABD3E70038E2D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7EA5207A20ABD3E70038E2D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7EA5207C20ABD3E70038E2D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B287AF2746ADF7B657864B40 /* Pods-upvideo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-upvideo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-upvideo/Pods-upvideo.debug.xcconfig"; sourceTree = "<group>"; };
+		D48B3FAE9076081550E38B88 /* Pods_upvideo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_upvideo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB2CEA1C84489E206EFD4BC7 /* Pods-upvideo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-upvideo.release.xcconfig"; path = "Pods/Target Support Files/Pods-upvideo/Pods-upvideo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35E82F62256E501B89C14909 /* Pods_upvideo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2FD9232C3A405FFBC606A307 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B287AF2746ADF7B657864B40 /* Pods-upvideo.debug.xcconfig */,
+				FB2CEA1C84489E206EFD4BC7 /* Pods-upvideo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		51D7851FAACF7E1669818C82 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D48B3FAE9076081550E38B88 /* Pods_upvideo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7EA5206420ABD3E40038E2D7 = {
 			isa = PBXGroup;
 			children = (
 				7EA5206F20ABD3E50038E2D7 /* upvideo */,
 				7EA5206E20ABD3E50038E2D7 /* Products */,
+				2FD9232C3A405FFBC606A307 /* Pods */,
+				51D7851FAACF7E1669818C82 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7EA5207F20ABD3E70038E2D7 /* Build configuration list for PBXNativeTarget "upvideo" */;
 			buildPhases = (
+				D0C81F950041C3DAB7E3B2E2 /* [CP] Check Pods Manifest.lock */,
 				7EA5206920ABD3E50038E2D7 /* Sources */,
 				7EA5206A20ABD3E50038E2D7 /* Frameworks */,
 				7EA5206B20ABD3E50038E2D7 /* Resources */,
+				268354DF005E4E916B4E0794 /* [CP] Embed Pods Frameworks */,
+				19897DA1528A76EE8A75043D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -129,6 +156,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		19897DA1528A76EE8A75043D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-upvideo/Pods-upvideo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		268354DF005E4E916B4E0794 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-upvideo/Pods-upvideo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-upvideo/Pods-upvideo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D0C81F950041C3DAB7E3B2E2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-upvideo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7EA5206920ABD3E50038E2D7 /* Sources */ = {
@@ -278,15 +359,13 @@
 		};
 		7EA5208020ABD3E70038E2D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B287AF2746ADF7B657864B40 /* Pods-upvideo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3NV32R76SX;
 				INFOPLIST_FILE = upvideo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.betasmart.upvideo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -296,15 +375,13 @@
 		};
 		7EA5208120ABD3E70038E2D7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB2CEA1C84489E206EFD4BC7 /* Pods-upvideo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3NV32R76SX;
 				INFOPLIST_FILE = upvideo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.betasmart.upvideo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
