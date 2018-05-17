@@ -26,14 +26,18 @@ class ViewController: UIViewController {
         uploadVideo()
         
     }
+    @IBAction func uploadImagebuttonClick(_ sender: UIButton) {
+        print("uploadImagebuttonClick")
+        uploadImage()
+    }
     
-    //上传视频到服务器
+    //上传图片到服务器
     private func uploadImage(){
         let urlString = "http://192.168.1.149/upvideo/upload.php"
         let request = AFHTTPRequestSerializer().multipartFormRequest(withMethod: "POST", urlString: urlString, parameters: nil, constructingBodyWith: { (formdata) in
-            let fileURL = Bundle.main.url(forResource: "hh", withExtension: "MP4")!
+            let fileURL = Bundle.main.url(forResource: "ff", withExtension: "jpg")!
             do {
-                try formdata.appendPart(withFileURL: fileURL, name: "file", fileName: "yy.mp4", mimeType: "video/mp4")
+                try formdata.appendPart(withFileURL: fileURL, name: "file", fileName: "ff2.jpg", mimeType: "image/jpeg")
             } catch {
                 print("formdataError")
             }
@@ -47,12 +51,14 @@ class ViewController: UIViewController {
         }) { (response, responseObject, error) in
             if let error = error {
                 print("-error-\(error)")
-                self.alert(withMessage: "上传失败")
+                self.alert(withMessage: "上传图片失败")
             } else {
                 print("-response-\(response)-responseObject-\(String(describing: responseObject))")
-                self.alert(withMessage: "上传成功")
+                self.alert(withMessage: "上传图片成功")
             }
         }
+        
+        
         
         uploadTask.resume()
     }
@@ -77,10 +83,10 @@ class ViewController: UIViewController {
         }) { (response, responseObject, error) in
             if let error = error {
                 print("-error-\(error)")
-                self.alert(withMessage: "上传失败")
+                self.alert(withMessage: "上传video失败")
             } else {
                 print("-response-\(response)-responseObject-\(String(describing: responseObject))")
-                self.alert(withMessage: "上传成功")
+                self.alert(withMessage: "上传video成功")
             }
         }
         
